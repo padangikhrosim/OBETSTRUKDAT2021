@@ -6,7 +6,7 @@ class LinkedList{
         Node nodeBaru = new Node(dataBaru); // 1. buat node baru
         if(first == null){
             first = nodeBaru;//first menunjuk ke nodeBaru
-            last = nodeBaru;//
+            last = nodeBaru;// last menunjuk ke nodeBaru
         }else{
             nodeBaru.next = first;
             first = nodeBaru;
@@ -15,10 +15,10 @@ class LinkedList{
     }
     public void addLast(int dataBaru){
         Node nodeBaru = new Node(dataBaru); // 1. buat node baru
-        if(first == null){
+        if(first == null){//jika awal belum ada node pada linkedList
             first = nodeBaru;
             last = nodeBaru;
-        }else{
+        }else{//jika pada linkedList sudah ada node
             last.next = nodeBaru;
             last = nodeBaru;
         }
