@@ -15,20 +15,20 @@ class LinkedList{
     }
     public void addLast(int dataBaru){
         Node nodeBaru = new Node(dataBaru); // 1. buat node baru
-        if(first == null){//jika awal belum ada node pada linkedList
+        if(first == null){//jika LinkedList masih Kosong
             first = nodeBaru;
             last = nodeBaru;
-        }else{//jika pada linkedList sudah ada node
+        }else{//jika LinkedList sudah ada node
             last.next = nodeBaru;
             last = nodeBaru;
         }
         size++;
     }
     public void printAll(){
-        Node current = first;
-        while(current != null){
+        Node current = first;//i=0;
+        while(current != null){//i<last
             System.out.print(current.data+" ");
-            current = current.next;
+            current = current.next;//i++
         }
     }
     public void replace(int dataOld, int dataNew){
